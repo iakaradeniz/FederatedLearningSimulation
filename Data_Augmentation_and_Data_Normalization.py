@@ -6,7 +6,7 @@ import numpy as np
 import os
 import random
 
-DATA_DIR = "D:\\SAUDersler\\Bilgisayar Mühendisliği Tasarımı\\VeriSetleri\\Preprocessed_Dataset"
+DATA_DIR = "/content/drive/MyDrive/Preprocessed_Dataset"
 
 # ImageNet normalizasyon değerleri
 MEAN = [0.485, 0.456, 0.406]
