@@ -88,6 +88,7 @@ def initialize_model(model_name, num_classes):
     
     return model.to(DEVICE)
 
+#istemci tarafında FedProx algoritması ile eğitim fonksiyonu. Global modelin ağırlıklarını referans alarak proximal terimi ekler.
 def train_client_fedprox(model, global_model, train_loader, lr):
     """ İstemci tarafında FEDPROX algoritması ile eğitim """
     model.train()
@@ -121,6 +122,7 @@ def train_client_fedprox(model, global_model, train_loader, lr):
 
     return model.state_dict(), running_loss / total, correct / total
 
+###????
 def validate_model(model, val_loader):
     model.eval()
     criterion = nn.CrossEntropyLoss()

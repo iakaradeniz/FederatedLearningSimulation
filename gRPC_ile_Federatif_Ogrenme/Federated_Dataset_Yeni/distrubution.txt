@@ -1,0 +1,81 @@
+======================================================================
+  Pipeline B — Fiziksel Federated Veri Bölme Başlıyor
+======================================================================
+  Kaynak : /content/drive/MyDrive/Preprocessed_Dataset
+  Hedef  : /content/drive/MyDrive/Federated_Dataset
+  Seed   : 42
+  Val    : %15 | Train: %85
+  İstemci dağılımı: client_0: %50 | client_1: %35 | client_2: %15
+──────────────────────────────────────────────────────────────────────
+
+[1/4] Kaynak veri seti indeksleniyor...
+  Toplam görüntü : 689
+  Sınıf sayısı   : 33
+
+[2/4] Global karıştırma ve val/train bölme (torch.randperm)...
+  Train : 590 görüntü
+  Val   : 99 görüntü
+
+[3/4] Train verisi istemcilere dağıtılıyor...
+  client_0 : 295 görüntü (%50.0)
+  client_1 : 206 görüntü (%34.9)
+  client_2 : 89 görüntü (%15.1)
+
+[4/4] Dosyalar kopyalanıyor...
+  Validation kopyalanıyor → /content/drive/MyDrive/Federated_Dataset/Validation_Data
+  client_0 kopyalanıyor → /content/drive/MyDrive/Federated_Dataset/Train_Data/client_0
+  client_1 kopyalanıyor → /content/drive/MyDrive/Federated_Dataset/Train_Data/client_1
+  client_2 kopyalanıyor → /content/drive/MyDrive/Federated_Dataset/Train_Data/client_2
+
+[TAMAM] Fiziksel bölme tamamlandı.
+
+======================================================================
+  FEDERATED DATASET DAĞILIM ANALİZİ
+======================================================================
+Sınıf                        Validation   client_0   client_1   client_2     TOPLAM
+-----------------------------------------------------------------------------------
+Acinetobacter.baumanii                3          8          5          4         20
+Actinomyces.israeli                   3         12          5          3         23
+Bacteroides.fragilis                  3         13          6          1         23
+Bifidobacterium.spp                   3         13          4          3         23
+Candida.albicans                      3         10          7          0         20
+Clostridium.perfringens               3         10          6          4         23
+Enterococcus.faecalis                 3          6          7          4         20
+Enterococcus.faecium                  3          7          7          3         20
+Escherichia.coli                      3          9          6          2         20
+Fusobacterium                         3          9          9          2         23
+Lactobacillus.casei                   3          7          6          4         20
+Lactobacillus.crispatus               3          7          5          5         20
+Lactobacillus.delbrueckii             3          8          6          3         20
+Lactobacillus.gasseri                 3          7          6          4         20
+Lactobacillus.jehnsenii               3         10          6          1         20
+Lactobacillus.johnsonii               3          7          7          3         20
+Lactobacillus.paracasei               3         10          5          2         20
+Lactobacillus.plantarum               3          8          8          1         20
+Lactobacillus.reuteri                 3          8          9          0         20
+Lactobacillus.rhamnosus               3         12          4          1         20
+Lactobacillus.salivarius              3          8          5          4         20
+Listeria.monocytogenes                3         10          4          5         22
+Micrococcus.spp                       3          7          8          3         21
+Neisseria.gonorrhoeae                 3          8          8          4         23
+Porfyromonas.gingivalis               3          9          5          6         23
+Propionibacterium.acnes               3         12          6          2         23
+Proteus                               3         13          3          1         20
+Pseudomonas.aeruginosa                3          9          6          2         20
+Staphylococcus.aureus                 3          8          8          1         20
+Staphylococcus.epidermidis            3          7          8          2         20
+Staphylococcus.saprophiticus          3          6          7          4         20
+Streptococcus.agalactiae              3         10          6          1         20
+Veionella                             3          7          8          4         22
+-----------------------------------------------------------------------------------
+TOPLAM                               99        295        206         89        689
+
+──────────────────────────────────────────────────────────────────────
+  ORAN ÖZETİ
+──────────────────────────────────────────────────────────────────────
+  Validation      99 görüntü  ( 14.4%)  ███████
+  client_0       295 görüntü  ( 42.8%)  █████████████████████
+  client_1       206 görüntü  ( 29.9%)  ██████████████
+  client_2        89 görüntü  ( 12.9%)  ██████
+======================================================================
+
